@@ -31,7 +31,11 @@ python manage runserve
 
 ## Start Project via Docker
 ```bash
-#TBD
+# build
+docker-compose build
+
+# run
+docker-compose up
 ```
 
 - Server will at: `127.0.0.1:8000`

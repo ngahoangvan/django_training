@@ -1,0 +1,17 @@
+version: "2"
+services:
+  django_training:
+    container_name: django_training
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    image: "django_training:v1"
+    ports:
+      - 8000:8000
+    # volumes:
+    #   - ./:/app/
+    environment:
+      - DJANGO_SETTINGS_MODULE=configs.settings.dev
+#    env_file:
+#      - .env.stg
+    restart: always
